@@ -33,7 +33,9 @@ for i in reversed (range (1, All+1)):
        First = int (input(f'{Lottery}: '))
     else:
        First = All % (Move+1)
-       print (f'{Lottery}: {First}')
+       if First == 0:
+           First = random.randint (1,28)  
+           print (f'{Lottery}: {First}')
     while First not in range (1,Move+1):
         print ('Введено неверное значение, введите число от 1 до 28')
         First = int (input(f'{Lottery}: '))
@@ -48,6 +50,8 @@ for i in reversed (range (1, All+1)):
         Second = int(input(f'{Player_2}: '))
     else:
         Second = All % (Move+1)
+        if Second == 0:
+            Second = random.randint (1,28)
         print (f'{Player_2}: {Second}')
     while Second not in range (1,Move+1):
         print ('Введено неверное значение, введите число от 1 до 28')
