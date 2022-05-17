@@ -34,8 +34,8 @@ for i in reversed (range (1, All+1)):
     else:
        First = All % (Move+1)
        if First == 0:
-           First = random.randint (1,28)  
-           print (f'{Lottery}: {First}')
+            First = random.randint (1,28)  
+       print (f'{Lottery}: {First}')
     while First not in range (1,Move+1):
         print ('Введено неверное значение, введите число от 1 до 28')
         First = int (input(f'{Lottery}: '))
